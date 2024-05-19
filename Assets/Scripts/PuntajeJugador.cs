@@ -12,11 +12,14 @@ public class PuntajeJugador : MonoBehaviour
     private Animator animator;
     [SerializeField] private GameObject efectoNutriendose;
 
+    private InterfazPuntajes interfazPuntos;
+
     private void Start() {
         puntaje=0f;
         ganandoPuntos=false;
         animator = GetComponent<Animator>();
-    }
+        interfazPuntos = GameObject.Find("UI_Canva").GetComponent<InterfazPuntajes>();
+        }
 
     public void CambioDeEstado()
     {
@@ -27,13 +30,15 @@ public class PuntajeJugador : MonoBehaviour
         if (ganandoPuntos){
             puntaje += cantidadPuntaje*Time.deltaTime;
             efectoNutriendose.SetActive(true);
-            InterfazPuntajes.Instance.SumarPuntosP1(puntaje*Time.deltaTime,numeroJugador);
+            //InterfazPuntajes.Instance.SumarPuntosP1(puntaje*Time.deltaTime,numeroJugador);
+            interfazPuntos.SumarPuntosP1(puntaje*Time.deltaTime,numeroJugador);
         } else {efectoNutriendose.SetActive(false);}
         animator.SetBool("Nutriendose",ganandoPuntos);
     }
 
     public void Muerte(){
-        InterfazPuntajes.Instance.SumarPuntosP1((-100f),numeroJugador);
+        //InterfazPuntajes.Instance.SumarPuntosP1((-100f),numeroJugador);
+        interfazPuntos.SumarPuntosP1((-100f),numeroJugador);
         puntaje-=100f;
         if (puntaje < 0f){
             puntaje = 0f;

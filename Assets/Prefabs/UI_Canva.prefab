@@ -254,6 +254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710e30792b95ea846a51215ebcc66f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puntosP1: 0
+  puntosP2: 0
   duracionRondas: 60
   textoP1: {fileID: 7229884714865959736}
   textoP2: {fileID: 4126021053728270157}

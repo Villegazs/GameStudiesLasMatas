@@ -7,8 +7,8 @@ using TMPro;
 public class InterfazPuntajes : MonoBehaviour
 {
     public static InterfazPuntajes Instance;
-    private float puntosP1;
-    private float puntosP2;
+    public float puntosP1;
+    public float puntosP2;
     private float contador;
     [SerializeField]private float duracionRondas;
     private int escenas;
@@ -19,21 +19,17 @@ public class InterfazPuntajes : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textoP2; 
 
     [SerializeField] private PuntajeJugador puntajeATomar;
+    private AyudaDios ayuda;
 
-    private void Awake() {
-        if (InterfazPuntajes.Instance == null) {
-            InterfazPuntajes.Instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
-        else{
-            Destroy(gameObject);
-        }
-    }
     private void Start() {
         escenas = 0;
         contador = 0;
         P1 = GameObject.Find("P1");
         P2 = GameObject.Find("P2");
+        ayuda = GameObject.Find("AyudaDios").GetComponent<AyudaDios>();
+
+        puntosP1 = ayuda.puntos1;
+        puntosP2 = ayuda.puntos2;
     }
 
     private void Update() {
@@ -45,6 +41,7 @@ public class InterfazPuntajes : MonoBehaviour
         if (contador>duracionRondas )
         {
             escenas++;
+            ayuda.almacenarPuntos(puntosP1,puntosP2);
             SceneManager.LoadScene(Random.Range(1, 5));
             contador = 0;
         }

@@ -213,11 +213,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 634875531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &290533461 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 110990574005609255, guid: 467ece794f5297a439abdf146fbf8d11, type: 3}
-  m_PrefabInstance: {fileID: 7413576611014561189}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &427911037
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,7 +818,6 @@ MonoBehaviour:
   espacioAnterior: 0
   lugaresMapa:
   - {fileID: 1902901711}
-  - {fileID: 0}
   - {fileID: 1961738836}
   - {fileID: 285372818}
 --- !u!1 &769490372
@@ -1269,11 +1263,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1679138005 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3863826143390576833, guid: 5f2198551255bb140a2dd01fdf76b350, type: 3}
-  m_PrefabInstance: {fileID: 8424464041195319903}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1750936787 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3381084096673473539, guid: c9ae74005cc3f0645b82e8c54d9979b0, type: 3}
@@ -1510,6 +1499,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11.97431, y: 0.3649943}
   m_EdgeRadius: 0
+--- !u!1 &1945014492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1945014493}
+  m_Layer: 0
+  m_Name: esadadads
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1945014493
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945014492}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.8717515, y: 1.1821586, z: -0.047708653}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1961738836
 GameObject:
   m_ObjectHideFlags: 0
@@ -2207,42 +2227,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2393259129212505749, guid: 467ece794f5297a439abdf146fbf8d11, type: 3}
-      propertyPath: numeroJugador
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2670938873319764346, guid: 467ece794f5297a439abdf146fbf8d11, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2670938873319764346, guid: 467ece794f5297a439abdf146fbf8d11, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2670938873319764346, guid: 467ece794f5297a439abdf146fbf8d11, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 3592525438834995328, guid: 467ece794f5297a439abdf146fbf8d11, type: 3}
+      propertyPath: prueba
+      value: 
+      objectReference: {fileID: 1945014493}
     - target: {fileID: 3592525438834995328, guid: 467ece794f5297a439abdf146fbf8d11, type: 3}
       propertyPath: barraVidaP1
       value: 
       objectReference: {fileID: 983915724}
-    - target: {fileID: 3592525438834995328, guid: 467ece794f5297a439abdf146fbf8d11, type: 3}
-      propertyPath: otroJugador
-      value: 
-      objectReference: {fileID: 1679138005}
-    - target: {fileID: 6708272692692270193, guid: 467ece794f5297a439abdf146fbf8d11, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6708272692692270193, guid: 467ece794f5297a439abdf146fbf8d11, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6708272692692270193, guid: 467ece794f5297a439abdf146fbf8d11, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6886320001936611379, guid: 467ece794f5297a439abdf146fbf8d11, type: 3}
       propertyPath: m_Name
       value: P1
@@ -2308,10 +2300,6 @@ PrefabInstance:
       propertyPath: barraVidaP2
       value: 
       objectReference: {fileID: 1750936790}
-    - target: {fileID: 7562207998626094846, guid: 5f2198551255bb140a2dd01fdf76b350, type: 3}
-      propertyPath: otroJugador
-      value: 
-      objectReference: {fileID: 290533461}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2329,3 +2317,4 @@ SceneRoots:
   - {fileID: 555210684}
   - {fileID: 427911040}
   - {fileID: 6326760530888162374}
+  - {fileID: 1945014493}

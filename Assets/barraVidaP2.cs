@@ -17,7 +17,7 @@ public class barraVidaP2 : MonoBehaviour
         slider.value = vidaActual;
     }
 
-    public void InicializarBarra (float cantidadVida){
-        CambiarVidaActual(cantidadVida);
-    }
+    //public void InicializarBarra (float cantidadVida){
+    //    CambiarVidaActual(cantidadVida);
+    //}
 }

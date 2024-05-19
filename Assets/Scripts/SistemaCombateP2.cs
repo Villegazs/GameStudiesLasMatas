@@ -41,7 +41,9 @@ public class SistemaCombateP2 : MonoBehaviour
         startPosicion = transform.position;
         vida = vidaMax;
 
-        barraVidaP2.InicializarBarra(vida);
+        //barraVidaP2.InicializarBarra(vida);
+
+        otroJugador = GameObject.Find("P1").transform;
     }
 
     private void Update() {
@@ -116,6 +118,7 @@ public class SistemaCombateP2 : MonoBehaviour
     public IEnumerator Respawn (float cd){
         rb2D.simulated=false;
         spriteRenderer.enabled=false;
+        rb2D.velocity = new Vector3(0, 0, 0);
         yield return new WaitForSeconds(cd);
         transform.position = startPosicion;
         spriteRenderer.enabled=true;

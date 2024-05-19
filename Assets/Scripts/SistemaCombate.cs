@@ -30,7 +30,7 @@ public class SistemaCombate : MonoBehaviour
 
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        barraVidaP1.InicializarBarra(vida);
+        //barraVidaP1.InicializarBarra(vida);
     }
     private void Start() {
         cargaAtaque=0f;
@@ -40,17 +40,17 @@ public class SistemaCombate : MonoBehaviour
         animatorAtks = esfera.GetComponent<Animator>();
         startPosicion = new Vector2(prueba.position.x,prueba.position.y);
         vida = vidaMax;
-
         
+        otroJugador = GameObject.Find("P2").transform;
     }
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.C) ){
+        if (Input.GetKeyDown(KeyCode.F) ){
             cargandoAtaque=true;
 
         }
 
-        if (Input.GetKeyUp(KeyCode.C)){
+        if (Input.GetKeyUp(KeyCode.F)){
             switch (cargaAtaque){    //este es importante para las animaciones, pero mecanicamente no significa mucho
                 case <0.5f:
                 Debug.Log("Ataque debil");
@@ -119,13 +119,14 @@ public class SistemaCombate : MonoBehaviour
         StartCoroutine(Respawn(tiempoRespawn));
     }
     public IEnumerator Respawn (float cd){
-        //rb2D.simulated=false;
+        rb2D.simulated=false;
         spriteRenderer.enabled=false;
+        rb2D.velocity= new Vector3(0, 0, 0);
         yield return new WaitForSeconds(cd);
         transform.position = startPosicion;
         spriteRenderer.enabled=true;
         vida = vidaMax;
-        //rb2D.simulated=true;
+        rb2D.simulated=true;
 
         barraVidaP1.CambiarVidaActual(vida);
     }
