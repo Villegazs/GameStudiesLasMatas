@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: -375}
+  m_AnchoredPosition: {x: -4, y: -299}
   m_SizeDelta: {x: 160, y: 58.0502}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &172990851
@@ -290,7 +290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 418.99738, y: 462.25497}
+  m_AnchoredPosition: {x: 353.3, y: 400}
   m_SizeDelta: {x: 506.6901, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &174957451
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gano el Tomate!
+  m_text: 'Ganador: El Tomate'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 39c0b0a3a1475954a926e409b7369475, type: 2}
   m_sharedMaterial: {fileID: 3407747383973428376, guid: 39c0b0a3a1475954a926e409b7369475, type: 2}
@@ -376,7 +376,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -1.7230225, w: 0}
+  m_margin: {x: 0, y: 0, z: -117.19467, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
